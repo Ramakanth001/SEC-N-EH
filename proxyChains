@@ -1,0 +1,32 @@
+*Proxy vs proxychain:*
+proxy server is intermediatory gateway between client and server.
+Proxy chaining involves forwarding traffic from one proxy server to another
+
+
+sudo apt install proxychains
+locate proxychains
+nano /etc/proxychains.conf
+
+Un-Comment the type of proxy u want:
+1.Random_chain [worst]
+2.Dynammic_chain [Deafult]
+3.strict_chain
+
+Un-Comment 'proxy_DNS'
+[This enables DNS updates using proxy. If DNS isnt updated, backtracking can be done with the dynammic IP and Location would be tracable]
+
+Example:
+PROTOCOL IP PORT ID PWD [Proxy Details]
+
+under default proxy[socks4 IP Port],
+add --> socks5 127.0.0.1 9050
+
+write out
+
+service tor status [To see status of proxy chain]
+service tor stop
+service tor start
+proxychains firefox www.duckduckgo.com [proxychains web-browser website]
+service tor stop
+
+**To check DNS leaks(ecurity flaw that allows DNS requests to be revealed to ISP DNS servers) go to www.dnsleaktest.com to check ur IP and Location**
