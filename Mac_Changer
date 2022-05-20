@@ -1,0 +1,38 @@
+**Macchanger can be used to change your mac address**
+
+*A media access control address (MAC address) is a unique identifier assigned to a network interface controller (NIC)
+for use as a network address in communications within a network segment*
+
+MAC --> 6 octets 48 bits
+ex: 00:00:5e:00:53:af
+
+first 3 octets give info regd the NIC manufacturer
+last 3 octets changable
+Works effecintly on home networks
+
+There are 2 MAC's in terminal of macchanger
+1.Current MAC: Changable
+2.Permanent MAC : Belongs to your original NIC manufacturer. Used to revert back.
+*Note : ALL CHANGES IN MAC ARE DONE IN CURRENT MAC*
+
+             ---------X-----------            ---------X-----------                 ---------X-----------
+             
+-ifconfig
+[Note interface name]
+
+-maccahnger -s eth0 (last parameter is interface name)
+[Displays current and permanent mac]
+
+-macchanger -a eth0
+[Changes mac to another MAC - random]
+
+-macchager -p eth0
+[Revert back to permanent MAC]
+
+-macchanger -l eth0
+[Lists Firt 3 octets of all manufacturers]
+
+-macchanger -m xx:xx:xx:xx:xx:xx etho
+[Changes your mac to custom MAC]
+
+*NOTE: For -m parameter choose the first 3 octects from any manufacturer listed in -l parameter*
