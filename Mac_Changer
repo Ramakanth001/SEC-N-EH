@@ -35,4 +35,4 @@ There are 2 MAC's in terminal of macchanger
 -macchanger -m xx:xx:xx:xx:xx:xx etho
 [Changes your mac to custom MAC]
 
-*NOTE: For -m parameter choose the first 3 octects from any manufacturer listed in -l parameter*
+*NOTE: For -m parameter choose the first 3 octects from any manufacturer listed in -l parameter *
