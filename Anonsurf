@@ -1,0 +1,28 @@
+Anonsurf will anonymize the entire system under TOR using IPTables. It will also allow you to start and stop i2p (Invisible Internet Project) as well
+
+
+
+                 -------X-------                        -------X-------                        -------X-------
+                                                            
+                                                            **INSTALLING ANONSURF**
+
+git clone https://github.com/Und3rf10w/kali-anonsurf.git
+
+cd kali-anonsurf/
+
+sudo ./installer.sh
+
+sudo anonsurf start
+[Starts anonsurf]
+
+anonsurf status
+[Check if deployment is successful]
+
+anonsurf myip
+[Displays allocated IP]
+
+anonsurf change
+[Allocates a new ip - restarting TOR services]
+
+sudo anonsurf stop
+[Stops anonsurf]
