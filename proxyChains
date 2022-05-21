@@ -3,7 +3,6 @@
 proxy server is intermediatory gateway between client and server.
 Proxy chaining involves forwarding traffic from one proxy server to another
 
-
 sudo apt install proxychains
 locate proxychains
 nano /etc/proxychains.conf
