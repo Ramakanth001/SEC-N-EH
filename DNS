@@ -1,0 +1,28 @@
+cat /etc/resolv.conf
+[Check your DNS]
+
+nano /etc/dhcp/dhclient.conf
+[opens the Configuration file of Dynammic Host Client]
+
+Now in order to change location of your DNS un-comment the 'prepend domain-name-server:127.0.0.1'
+Now change the IP given(Loop back address) to any available open DNS service (Browse it)
+[*EXAMPLE:*
+Primary DNS: 208.67.222.222.
+Secondary DNS: 208.67.220.220.]
+
+*Your new command should loook like*
+prepend domain-name-server : 208.67.222.222, 208.67.220.220;
+
+service network-manager restart
+[Restarts Network Services]
+
+If the last step Doesnt work,
+
+Excecute the ones below:
+
+systemctl enable NetworkManager
+systemctl enable NetworkManager
+service NetworkManager restart
+
+Other Way is to install RHLE8 [Red Hat Enterprise Linux 8]
+It has default ifup and ifdowns to independently control the network interfaces
